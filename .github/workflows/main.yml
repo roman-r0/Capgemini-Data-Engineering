@@ -14,8 +14,11 @@ jobs:
           python-version: 3.12
       - name: Install pipenv
         run: pip install pipenv
-      - name: Run tests
+      - name: Run lint
         run: |
           pipenv install --dev
           pipenv run ruff check .
+      - name: Run tests
+        run: |
+          pipenv install --dev
           pipenv run pytest
