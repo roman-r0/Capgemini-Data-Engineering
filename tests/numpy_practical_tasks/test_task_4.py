@@ -56,7 +56,7 @@ def test_load_array_from_file__should_load_file(
 ):
     input_array = create_array()
     file_path = temp_folder_for_files_folder / f"tmp_file.{file_format}"
-    result = save_array(
+    save_array(
         arr=input_array,
         file_path=file_path,
         file_format=file_format,
