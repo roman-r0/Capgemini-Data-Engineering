@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 numpy = "*"
 pandas = "*"
+matplotlib = "*"
+bokeh = "*"
+scikit-learn = "*"
 
 [dev-packages]
 pytest = "*"
