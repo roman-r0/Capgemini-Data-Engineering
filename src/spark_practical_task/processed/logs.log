@@ -1,0 +1,164 @@
+2024-09-07 17:48:07,500 - INFO - Processing {'AB_NYC_2019.csv'}...
+2024-09-07 17:48:07,501 - INFO - Processing AB_NYC_2019.csv...
+2024-09-07 17:48:11,960 - INFO - Starting data transformation...
+2024-09-07 17:48:14,217 - INFO - Successfully transformed data!
+2024-09-07 17:48:14,879 - INFO - Row count validation passed: 48874 records
+2024-09-07 17:48:15,450 - INFO - No NULL values in column 'price'
+2024-09-07 17:48:15,825 - INFO - No NULL values in column 'minimum_nights'
+2024-09-07 17:48:16,139 - ERROR - NULL values found in column 'availability_365': 156 records
+NoneType: None
+2024-09-07 17:48:16,139 - INFO - Processing SQL queries...
+2024-09-07 17:48:16,273 - INFO - Listings by Neighborhood Group:
+2024-09-07 17:48:20,039 - INFO - +-------------------+------------+
+|neighbourhood_group|num_listings|
++-------------------+------------+
+|          Manhattan|       21593|
+|           Brooklyn|       20046|
+|             Queens|        5630|
+|              Bronx|        1079|
+|      Staten Island|         370|
+|             Harlem|          13|
+| Bedford-Stuyvesant|           9|
+|           Elmhurst|           7|
+|    Upper East Side|           7|
+|     Hell's Kitchen|           7|
+|       Williamsburg|           6|
+|         Mott Haven|           5|
+|        East Harlem|           5|
+| Washington Heights|           4|
+|       East Village|           4|
+|           Bushwick|           4|
+|           Canarsie|           4|
+|            Midtown|           4|
+|            Midwood|           3|
+|   Ditmars Steinway|           3|
++-------------------+------------+
+only showing top 20 rows
+
+2024-09-07 17:48:20,040 - INFO - Top 10 Most Expensive Listings:
+2024-09-07 17:48:21,027 - INFO - +--------+--------------------+---------+--------------+-------------------+---------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+-----------------+
+|      id|                name|  host_id|     host_name|neighbourhood_group|  neighbourhood|latitude|longitude|      room_type|price|minimum_nights|number_of_reviews|last_review|reviews_per_month|calculated_host_listings_count|availability_365|price_range| price_per_review|
++--------+--------------------+---------+--------------+-------------------+---------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+-----------------+
+| 4737930|  Spanish Harlem Apt|  1235070|         Olson|          Manhattan|    East Harlem|40.79264|-73.93898|Entire home/apt| 9999|             5|                1| 2015-01-02|             0.02|                             1|               0|     luxury|              0.0|
+|31340283|2br - The Heart o...|  4382127|          Matt|          Manhattan|Lower East Side| 40.7198|-73.98566|Entire home/apt| 9999|            30|                0| 2011-03-28|                0|                             1|             365|     luxury|              0.0|
+| 9528920|Quiet, Clean, Lit...|  3906464|           Amy|          Manhattan|Lower East Side|40.71355|-73.98507|   Private room| 9999|            99|                6| 2016-01-01|             0.14|                             1|              83|     luxury|              0.0|
+|32235802|Stable Room at In...|241889662|      Incentra|          Manhattan|   West Village|40.73742|-74.00484|   Private room|  999|             1|                1| 2019-04-24|             0.39|                             5|             310|     luxury|              0.0|
+|  841211|Spacious Centrall...|  3665164|        Joseph|          Manhattan|        Chelsea| 40.7466|-73.99219|   Private room|  999|            10|               30| 2016-10-12|             0.40|                             1|             365|     luxury|              0.0|
+|16489149|2 BDRM PRESIDENTI...| 69545883|        Chayla|          Manhattan|        Midtown|40.75373|-73.97272|   Private room|  999|             3|                1| 2017-09-11|             0.05|                            12|             365|     luxury|              0.0|
+|12096332|Amazing Views 3BR...| 64052858|Elizabeth Anne|          Manhattan|        Midtown| 40.7442|-73.98748|Entire home/apt|  999|             2|               54| 2019-06-19|             1.49|                             1|              58|     luxury|670.4697986577181|
+|32327466|Lahore Suite at I...|241889662|      Incentra|          Manhattan|   West Village|40.73897|-74.00346|   Private room|  999|             1|                3| 2019-05-19|             0.70|                             5|             341|     luxury|              0.0|
+| 6969473| SOHO GEM 2750 SQ FT| 30247261|          Nima|          Manhattan|   Little Italy|40.72039|-73.99683|Entire home/apt|  999|             7|                1| 2015-12-27|             0.02|                             1|               0|     luxury|              0.0|
+|36186719|Private Bedroom i...|268920555| Terrence Jake|          Manhattan|        Chelsea|40.74531|-73.99454|   Private room|  999|            30|                0| 2011-03-28|                0|                             1|             270|     luxury|              0.0|
++--------+--------------------+---------+--------------+-------------------+---------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+-----------------+
+
+2024-09-07 17:48:21,028 - INFO - Average Price by Room Type:
+2024-09-07 17:48:22,050 - INFO - +-------------------+---------------+------------------+
+|neighbourhood_group|      room_type|         avg_price|
++-------------------+---------------+------------------+
+|       Borough Park|             70|               2.0|
+|               NoHo|            179|               1.0|
+|            Arverne|            250|               2.0|
+|           Canarsie|            130|               1.0|
+|           Elmhurst|             51|               1.0|
+|             Harlem|             80|               5.0|
+|   Long Island City|             93|               1.0|
+|            Chelsea|            205|               4.0|
+|   Long Island City|             46|               1.0|
+|   Ditmars Steinway|             79|               6.0|
+|      Staten Island|   Private room|62.494623655913976|
+| Washington Heights|             75|               3.0|
+|  Concourse Village|             65|               1.0|
+|            Astoria|            170|               3.0|
+|  Greenwich Village|            410|              31.0|
+|           Brooklyn|   Private room| 76.51777403703338|
+|           Woodside|            425|               1.0|
+|    Stuyvesant Town|            279|               2.0|
+|           Canarsie|             55|               2.0|
+|              Bronx|Entire home/apt|127.87765957446808|
++-------------------+---------------+------------------+
+only showing top 20 rows
+
+2024-09-07 17:48:30,962 - INFO - Merging new data with existing...
+2024-09-07 17:48:37,277 - INFO - Successfully merged data!
+2024-09-07 17:51:36,949 - INFO - Processing {'AB_NYC_20191.csv'}...
+2024-09-07 17:51:36,950 - INFO - Processing AB_NYC_20191.csv...
+2024-09-07 17:51:40,768 - INFO - Starting data transformation...
+2024-09-07 17:51:43,017 - INFO - Successfully transformed data!
+2024-09-07 17:51:43,608 - INFO - Row count validation passed: 48874 records
+2024-09-07 17:51:44,068 - INFO - No NULL values in column 'price'
+2024-09-07 17:51:44,430 - INFO - No NULL values in column 'minimum_nights'
+2024-09-07 17:51:44,743 - ERROR - NULL values found in column 'availability_365': 156 records
+NoneType: None
+2024-09-07 17:51:44,743 - INFO - Processing SQL queries...
+2024-09-07 17:51:44,876 - INFO - Listings by Neighborhood Group:
+2024-09-07 17:51:49,244 - INFO - +-------------------+------------+
+|neighbourhood_group|num_listings|
++-------------------+------------+
+|          Manhattan|       21593|
+|           Brooklyn|       20046|
+|             Queens|        5630|
+|              Bronx|        1079|
+|      Staten Island|         370|
+|             Harlem|          13|
+| Bedford-Stuyvesant|           9|
+|           Elmhurst|           7|
+|    Upper East Side|           7|
+|     Hell's Kitchen|           7|
+|       Williamsburg|           6|
+|         Mott Haven|           5|
+|        East Harlem|           5|
+|       East Village|           4|
+|           Bushwick|           4|
+|            Midtown|           4|
+| Washington Heights|           4|
+|           Canarsie|           4|
+|          Woodhaven|           3|
+|   Ditmars Steinway|           3|
++-------------------+------------+
+only showing top 20 rows
+
+2024-09-07 17:51:49,244 - INFO - Top 10 Most Expensive Listings:
+2024-09-07 17:51:50,192 - INFO - +--------+--------------------+--------+--------------+-------------------+-----------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+------------------+
+|      id|                name| host_id|     host_name|neighbourhood_group|    neighbourhood|latitude|longitude|      room_type|price|minimum_nights|number_of_reviews|last_review|reviews_per_month|calculated_host_listings_count|availability_365|price_range|  price_per_review|
++--------+--------------------+--------+--------------+-------------------+-----------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+------------------+
+| 4737930|  Spanish Harlem Apt| 1235070|         Olson|          Manhattan|      East Harlem|40.79264|-73.93898|Entire home/apt| 9999|             5|                1| 2015-01-02|             0.02|                             1|               0|     luxury|               0.0|
+| 9528920|Quiet, Clean, Lit...| 3906464|           Amy|          Manhattan|  Lower East Side|40.71355|-73.98507|   Private room| 9999|            99|                6| 2016-01-01|             0.14|                             1|              83|     luxury|               0.0|
+|31340283|2br - The Heart o...| 4382127|          Matt|          Manhattan|  Lower East Side| 40.7198|-73.98566|Entire home/apt| 9999|            30|                0| 2011-03-28|                0|                             1|             365|     luxury|               0.0|
+|  841211|Spacious Centrall...| 3665164|        Joseph|          Manhattan|          Chelsea| 40.7466|-73.99219|   Private room|  999|            10|               30| 2016-10-12|             0.40|                             1|             365|     luxury|               0.0|
+|12096332|Amazing Views 3BR...|64052858|Elizabeth Anne|          Manhattan|          Midtown| 40.7442|-73.98748|Entire home/apt|  999|             2|               54| 2019-06-19|             1.49|                             1|              58|     luxury| 670.4697986577181|
+| 6969473| SOHO GEM 2750 SQ FT|30247261|          Nima|          Manhattan|     Little Italy|40.72039|-73.99683|Entire home/apt|  999|             7|                1| 2015-12-27|             0.02|                             1|               0|     luxury|               0.0|
+| 8069030|   Clinton Hill Flat|42619297|          John|           Brooklyn|     Clinton Hill|40.69242|-73.96828|Entire home/apt|  999|             2|              141| 2019-04-28|             3.04|                             2|              67|     luxury|328.61842105263156|
+|11553360|              King 7|42619297|          John|           Brooklyn|      Fort Greene|40.69413| -73.9723|Entire home/apt|  999|             2|               94| 2019-06-02|             2.85|                             2|             361|     luxury| 350.5263157894737|
+|12040331|Lrg 2 BR Duplex T...|64454893|          Atul|          Manhattan|Greenwich Village|40.73426|-73.99476|Entire home/apt|  999|             3|               11| 2019-05-04|             0.28|                             1|             164|     luxury|               0.0|
+|14590476|Luxury Full-Floor...|90256030|        Andrew|          Manhattan|          Chelsea|40.74775|-73.99167|Entire home/apt|  999|             2|                1| 2016-10-12|             0.03|                             1|               0|     luxury|               0.0|
++--------+--------------------+--------+--------------+-------------------+-----------------+--------+---------+---------------+-----+--------------+-----------------+-----------+-----------------+------------------------------+----------------+-----------+------------------+
+
+2024-09-07 17:51:50,192 - INFO - Average Price by Room Type:
+2024-09-07 17:51:51,240 - INFO - +-------------------+---------------+------------------+
+|neighbourhood_group|      room_type|         avg_price|
++-------------------+---------------+------------------+
+|       Borough Park|             70|               2.0|
+|               NoHo|            179|               1.0|
+|            Arverne|            250|               2.0|
+|           Canarsie|            130|               1.0|
+|           Elmhurst|             51|               1.0|
+|             Harlem|             80|               5.0|
+|   Long Island City|             93|               1.0|
+|   Ditmars Steinway|             79|               6.0|
+|            Chelsea|            205|               4.0|
+|   Long Island City|             46|               1.0|
+|      Staten Island|   Private room|62.494623655913976|
+| Washington Heights|             75|               3.0|
+|  Concourse Village|             65|               1.0|
+|            Astoria|            170|               3.0|
+|  Greenwich Village|            410|              31.0|
+|           Brooklyn|   Private room| 76.51777403703338|
+|           Woodside|            425|               1.0|
+|    Stuyvesant Town|            279|               2.0|
+|           Canarsie|             55|               2.0|
+|              Bronx|Entire home/apt|127.87765957446808|
++-------------------+---------------+------------------+
+only showing top 20 rows
+
+2024-09-07 17:52:01,567 - INFO - Merging new data with existing...
+2024-09-07 17:52:31,663 - INFO - Successfully merged data!
